@@ -1,12 +1,12 @@
 header{
-    height: 60px;
-    background-color: aqua;
+    grid-area: hd;
+    background-color: rgb(103, 212, 234);
 }
 
 nav{
-
+    background-color: white;
     width: 100%;
-
+    gap: 0.5px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 40px;
@@ -22,14 +22,20 @@ nav{
 
 .navitm1{
     grid-area: nav1;
-    background-color: rgb(129, 129, 211);
+    background-color: rgb(185, 185, 189);
 }
 
 .navitm2{
     grid-area: nav2;
-    background-color: orange;
+    background-color:rgb(185, 185, 189);
 }
 .navitm3{
     grid-area: nav3;
-    background-color: red;
+    background-color:rgb(185, 185, 189);
+}
+
+
+
+img{
+    height: 30px;
 }
