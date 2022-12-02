@@ -1,0 +1,35 @@
+header{
+    height: 60px;
+    background-color: aqua;
+}
+
+nav{
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px;
+    grid-template-areas:
+    'nav1 nav2 nav3';
+
+}
+
+.nav_article{
+    height:100%;
+    width:100%;
+}
+
+.navitm1{
+    grid-area: nav1;
+    background-color: rgb(129, 129, 211);
+}
+
+.navitm2{
+    grid-area: nav2;
+    background-color: orange;
+}
+.navitm3{
+    grid-area: nav3;
+    background-color: red;
+}
