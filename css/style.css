@@ -1,41 +1,92 @@
-header{
-    grid-area: hd;
-    background-color: rgb(103, 212, 234);
-}
 
-nav{
-    background-color: white;
-    width: 100%;
-    gap: 0.5px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 40px;
+/* layout för alla sidor */
+.container{
+    height: 110vh;
+    display:grid;
+    grid-template-rows: 0.5fr 4fr 0.5fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-    'nav1 nav2 nav3';
-
+    'hd '
+    'mn'
+    'ft';
 }
 
-.nav_article{
-    height:100%;
-    width:100%;
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+
+/* header kod */
+header{
+    background-color: rgb(31, 31, 31);
+    grid-area: hd;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    '. . drj hem oms. .';
 }
 
-.navitm1{
-    grid-area: nav1;
-    background-color: rgb(185, 185, 189);
+.djur{
+    grid-area: drj;
+    background-color: rgb(31, 31, 31);
+    text-align: center;
+}
+.hem{
+    grid-area: hem;
+    background-color: rgb(31, 31, 31);
+    text-align: center;
+}
+.om_oss{
+    grid-area: oms;
+    background-color: rgb(31, 31, 31);
+    text-align: center;
 }
 
-.navitm2{
-    grid-area: nav2;
-    background-color:rgb(185, 185, 189);
+/* main kod */
+.main{
+    grid-area: mn;
+    background-color:green;
+    grid-area: mn;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    '. . . . . .'
+    '. . . . kt kt';
 }
-.navitm3{
-    grid-area: nav3;
-    background-color:rgb(185, 185, 189);
+.karta{
+    position: relative;
+    grid-area: kt;
+}
+iframe{
+    width: 99%;
+    height: 98%;
 }
 
+/* footer kod */
+footer{
+    grid-area: ft;
+    background-color: orangered;
+}
 
+/* våra djur kod */
+.main2{
+    grid-area: mn;
+    background-color:green;
+    grid-area: mn;
+    display: flex;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas:
+    'pnd . .'
+    '. . .';
+}
 
-img{
-    height: 30px;
+/* card kod */
+.card{
+    
+}
+
+.panda{
+    grid-area: pnd;
+    width: auto;
 }
