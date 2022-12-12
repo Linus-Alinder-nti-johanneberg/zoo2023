@@ -70,23 +70,26 @@ footer{
 
 /* våra djur kod */
 .main2{
-    grid-area: mn;
     background-color:green;
-    grid-area: mn;
     display: flex;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-areas:
-    'pnd . .'
-    '. . .';
+    flex-wrap: wrap;
 }
 
 /* card kod */
 .card{
-    
+    background-color: rgb(255, 255, 255);
+    flex: 20%;
+    margin:45px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius:10px;
+    align-self: stretch;
 }
 
-.panda{
-    grid-area: pnd;
-    width: auto;
+
+.card img {
+    max-width:100%;
+    border-radius:10px;
+}
+.card .text {
+    padding: 0 20px 20px;
 }
