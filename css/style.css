@@ -11,7 +11,10 @@
     'ft';
 }
 
-a:link { text-decoration: none; }
+a {
+    text-decoration: none;
+    color:white;
+}
 a:visited { text-decoration: none; }
 
 /* header kod */
@@ -22,7 +25,13 @@ header{
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    '. . drj hem oms. .';
+    'lgo . drj hem oms. .';
+}
+
+.logo{
+    grid-area: lgo;
+    max-width: 90px;
+    margin-left: 50px ;
 }
 
 .djur{
@@ -79,7 +88,7 @@ footer{
 .card{
     background-color: rgb(255, 255, 255);
     flex: 20%;
-    margin:45px;
+    margin:35px;
     border: 2px solid rgb(255, 255, 255);
     border-radius:10px;
     align-self: stretch;
@@ -89,6 +98,7 @@ footer{
 .card img {
     max-width:100%;
     border-radius:10px;
+    
 }
 .card .text {
     padding: 0 20px 20px;
