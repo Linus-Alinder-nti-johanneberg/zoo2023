@@ -59,7 +59,7 @@ header{
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    '. . . . . .'
+    '. . . . hta hta'
     '. . . . kt kt';
 }
 .karta{
@@ -69,6 +69,11 @@ header{
 iframe{
     width: 99%;
     height: 98%;
+}
+.hitta_hit{
+    grid-area: hta;
+    margin-right: 40px;
+    margin-top: 170px;
 }
 
 /* footer kod */
