@@ -3,7 +3,7 @@
 .container{
     height: 110vh;
     display:grid;
-    grid-template-rows: 0.5fr 4fr 0.5fr;
+    grid-template-rows: auto 4fr auto;
     grid-template-columns: 1fr;
     grid-template-areas:
     'hd '
@@ -11,10 +11,7 @@
     'ft';
 }
 
-a {
-    text-decoration: none;
-    color:white;
-}
+a:link{text-decoration: none;}
 a:visited { text-decoration: none; }
 
 /* header kod */
@@ -22,7 +19,7 @@ header{
     background-color: rgb(31, 31, 31);
     grid-area: hd;
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
     'lgo . drj hem oms. .';
@@ -36,30 +33,31 @@ header{
 
 .djur{
     grid-area: drj;
-    background-color: rgb(31, 31, 31);
+    color:white;
     text-align: center;
 }
 .hem{
     grid-area: hem;
-    background-color: rgb(31, 31, 31);
+    color:white;
     text-align: center;
 }
 .om_oss{
     grid-area: oms;
-    background-color: rgb(31, 31, 31);
+    color:white;
     text-align: center;
 }
 
 /* main kod */
 .main{
-    grid-area: mn;
-    background-color:green;
+    background-image:url(https://static.vecteezy.com/system/resources/thumbnails/002/019/497/original/jungle-tropical-background-free-video.jpg);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
     grid-area: mn;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    '. . . . hta hta'
+    'int int valk valk hta .'
     '. . . . kt kt';
 }
 .karta{
@@ -73,13 +71,37 @@ iframe{
 .hitta_hit{
     grid-area: hta;
     margin-right: 40px;
-    margin-top: 170px;
+    margin-top: 270px;
+}
+.valkommen{
+    text-align: center;
+    grid-area: valk;
+    font-size:150%;
+}
+.intro{
+    grid-area: int;
+    margin-top:140px;
+    margin-left:150px;
+    text-align: center;
 }
 
 /* footer kod */
-footer{
+footer {
     grid-area: ft;
-    background-color: orangered;
+    width: 100%;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+.contact {
+    font-size: 14px;
+    text-decoration: none;
 }
 
 /* våra djur kod */
@@ -88,7 +110,6 @@ footer{
     display: flex;
     flex-wrap: wrap;
 }
-
 /* card kod */
 .card{
     background-color: rgb(255, 255, 255);
@@ -99,8 +120,7 @@ footer{
     align-self: stretch;
 }
 
-
-.card img {
+.card img{
     max-width:100%;
     border-radius:10px;
     
@@ -108,4 +128,42 @@ footer{
 .card .text {
     padding: 0 20px 20px;
     text-align: center;
+}
+
+/* meny */
+.main3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    'grl tbh';
+    background-image:url(../img/bakgrund.jpg);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+li{
+    text-align: center;
+    list-style: none;
+    margin-top: 60px;
+}
+.grillat{
+    margin-left: 300px;
+    margin-right: 80px;
+    grid-area:grl;
+    background-color: #dbbb94;
+    border-radius: 20px;
+}
+
+.tillbehor{
+    margin-left: 80px;
+    margin-right: 300px;
+    grid-area:tbh;
+    background-color: #dbbb94;;
+    border-radius: 20px;
+}
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+*{
+    font-family: 'Oxygen', sans-serif;
 }
